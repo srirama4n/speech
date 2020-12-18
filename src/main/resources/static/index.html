@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Chat Window</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" />
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>
+
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+    <script src="app.js"></script>
+</head>
+<body>
+<div class="spinner-border text-primary"></div>
+
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-md-6">
+                <div class="card card-bordered">
+                    <div class="card-header">
+                        <h1 class="card-title"><strong>Simple Voice Chat App</strong></h1>
+                    </div>
+                    <div class="ps-container ps-theme-default ps-active-y" id="chat-content"
+                         style="overflow-y: scroll !important; height:400px !important;border: 1px solid black;">
+
+                        <div id="content">
+                        </div>
+
+                        <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                            <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                        </div>
+                        <div class="ps-scrollbar-y-rail" style="top: 0px; height: 0px; right: 2px;">
+                            <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 2px;"></div>
+                        </div>
+                    </div>
+                    <div class="publisher bt-1 border-light" style="border: 1px solid #15158e;">
+                        <div><img src="https://img.icons8.com/cute-clipart/64/000000/microphone.png" id="welcome"/> Start Conversation</div>
+                        <div><img src="https://img.icons8.com/cute-clipart/64/000000/microphone.png" id="mic"/> Ask Me</div>
+                        <!--<img src="https://img.icons8.com/cute-clipart/64/4a90e2/block-microphone.png" id="block-mic"/>
+                        <img src="https://img.icons8.com/fluent/48/4a90e2/music-transcript.png" id="music-transcript"/>-->
+
+<!--                        <input class="publisher-input" type="text" placeholder="Write something">-->
+                        <!--
+                                                <a href="https://icons8.com/icon/119488/microphone"></a>
+                                                <a href="https://icons8.com/icon/121309/block-microphone"></a>
+                                                <a href="https://icons8.com/icon/mZKYvU0NTyDd/music-notation"></a>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--- Sample Window-->
+
+</body>
+</html>
