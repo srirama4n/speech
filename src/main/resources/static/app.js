@@ -163,7 +163,6 @@ function scrollDown() {
     document.getElementById('chat-content').scrollTop =  document.getElementById('chat-content').scrollHeight;
 }
 
-
 function welcome(){
     $("#content").empty();
     var welcomeText = 'Hello User. I am your virtual Assistant. Ask me about your Investments, Statements or Loans';
