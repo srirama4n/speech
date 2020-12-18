@@ -9,16 +9,6 @@ var input; 							//MediaStreamAudioSourceNode we'll be recording
 var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioContext //audio context to help us record
 
-var recordButton = document.getElementById("recordButton");
-var stopButton = document.getElementById("stopButton");
-var pauseButton = document.getElementById("pauseButton");
-
-//add events to those 2 buttons
-/*recordButton.addEventListener("click", startRecording);
-stopButton.addEventListener("click", stopRecording);
-pauseButton.addEventListener("click", pauseRecording);*/
-
-
 function createDownloadLink(blob) {
 
 	var url = URL.createObjectURL(blob);
@@ -52,6 +42,7 @@ function createDownloadLink(blob) {
 }
 
 function speechToText(blob){
+    showLoader();
     var fd = new FormData();
     fd.append("audio_data", blob, "somefile");
 
@@ -68,14 +59,17 @@ function speechToText(blob){
            success: function (text) {
                showUserChat(text);
                processChat(text);
+               hideLoader();
            },
            error: function (e) {
                console.log("ERROR : ", e);
+               hideLoader();
            }
      });
 }
 
 function processChat(intent){
+    showLoader();
     $.ajax({
             type: "POST",
             url: "/chat",
@@ -84,15 +78,18 @@ function processChat(intent){
             timeout: 600000,
             success: function (data) {
                textToSpeech(data);
+               hideLoader();
             },
             error: function (e) {
               console.log("ERROR : ", e);
+              hideLoader();
             }
      });
 }
 
 
 function textToSpeech(text){
+    showLoader();
     $.ajax({
            type: "POST",
            url: "/text-to-speech",
@@ -102,14 +99,14 @@ function textToSpeech(text){
            success: function (data) {
                 showSystemChat(text);
                 playAudio(data);
+                hideLoader();
            },
            error: function (e) {
                console.log("ERROR : ", e);
+               hideLoader();
            }
      });
 }
-
-
 
 function playAudio(data){
     var snd = new Audio("data:audio/wav;base64,"+data);
@@ -120,30 +117,16 @@ function showSystemChat(text){
     text = text.replace('\.', '\. \n');
     var systemChat = '<div class="media media-chat"><img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="..."> <div class="media-body"> <p>'+text+'</p> </div> </div>';
     $("#content").append(systemChat);
+    scrollDown();
 }
 
 function showUserChat(text){
     var userChat = '<div class="media media-chat media-chat-reverse"> <div class="media-body"><p>'+text+'</p></div></div>';
     $("#content").append(userChat);
+    scrollDown();
 }
 
 function startRecording() {
-    /*
-    * Click to trigger chat [/]
-    * Play Welcome message [/]
-    * Show Welcome Message [/]
-    * Listen to user
-    * Convert the user speech to text
-    * Show the user text on user interface
-    * Retrieve the intent from the text
-    * Pull the messages related to intent
-    * Convert the intent response to speech
-    * Show the intent response on the user Interface
-    * Show Start Over
-    *
-    *
-    */
-
     var constraints = { audio: true, video:false }
 
 
@@ -168,9 +151,18 @@ function stopRecording() {
 	rec.exportWAV(speechToText);
 }
 
-function inactive(){
-    console.log("inactive");
+function showLoader(){
+    $('#loader').show();
 }
+
+function hideLoader(){
+    $('#loader').hide();
+}
+
+function scrollDown() {
+    document.getElementById('chat-content').scrollTop =  document.getElementById('chat-content').scrollHeight;
+}
+
 
 function welcome(){
     $("#content").empty();
@@ -179,6 +171,7 @@ function welcome(){
 }
 
 $(document).ready(function(){
+    hideLoader();
     $("#welcome").click(welcome);
     $("#mic").click(startRecording);
 });
