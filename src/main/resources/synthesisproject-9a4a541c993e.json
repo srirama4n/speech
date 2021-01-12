@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "synthesisproject",
+  "private_key_id": "9a4a541c993e3aef9628eed18a0156cf1502241c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDK5CvsxCyxwjib\nC1y5gCZPjoYPdv9WhBGeZfOoxngAKK/JaW3lYOfHxpNxO59LR0CRBz5jSyvdXnZH\nKneYPYX0nceeUlbavCGYhB83D68HSujNtSzbvc2PbtxbSAPhiB5xCGtkbhWOrfWF\n/W+jAEGGnDpbbQkaRFZjpOhPzMCnCEitWDv5HY7fq1IzJ55SF+FrS+q1VzDOqSoE\np/Cgzsi7KPVL+Ac1Q+DkdB9ZH7l79oDyrwkloo+64/yVHP7gj0ECaBCupkBWWRjX\nH6KdneA8lZAI6HMs6TDzvtqSxOpB2zGHfV3f1a/CaD0HuEVXq+1H97iDbfNuNNWZ\nZuscSg/xAgMBAAECggEAN6T4fwkWkPIJgExPc/i3iR43mkoyoVG7W0vu1Z0JEFIY\nVA78Ouqm5t2JVobZm1XBWYU5ERZuw1nC6qW1AyXsdThIpR1EAN2UATZLMVi10jQz\nQSetU97sX6gx+z73AYXJg4qhmXuvoeAH9GWbloLddcOnJafz1SZk4xM5O5mWRLi9\np3Re9RH0CsXklDXF5HtIrIW8/ITurcrqf5M7F3JgbcTrGSiOX66IImvciH4EsgJB\nwhCY3Dz3vbFSUpySbUX3a+KZ2QQnWUfoQeVlOrLa/XquIDESt0JogzvvcYGkLAmh\nrJdCdQ6D+MBRfFrZcDcCCvc6FHEumGvxP8/nbcgGGQKBgQDyRjTYemBpxoZRQ2Hs\npDX1tTnbkCQLNgYBBpQFPyowlhdluoSTa2f/Ehsmopw9XpxlyYroNkQWIVn3uIbS\ngxfGBgbsCQaHwIxksuCcnhbzhzvWSOl/wVxDBrO9DZxfydgwnOh4uQzrl3W/0QGO\n6GzywZ44t2+V5sk/CTWkKv/JXwKBgQDWYseS3+Pl4NuiTlbiNw1m23ARkBt8nAEh\nRBIdiO6hUKktYJMbQH0OY1bZmgUprU35fHTX+Lb64u5uM8v3wSHXw/pJFeK2xSc8\nyi4AYplGF2cP/e9bN4USFEpJZVpd5Lct1b7PnKTNhX+wVfUn7zm0gfHajoD0/hVl\nOs4EAYGYrwKBgHQCBAnoR0Q+6E//GOOsGZ5mwaaN1YR8wNE66iO9BCGxrNBsSFEi\nq/BqJhAQ6wlDxVXD9LyOR3nlTGQeuogQd5C9kBDznWnhXBhXws+br1e62H8Z+JzQ\n5LG/gs8ytj7zso5Mg9BSo4onwx0vIjTgvFJdPbrgsxCvKowBh+rtH/+3AoGASw7g\ncrLCVnxoSSYGU0MVBRr03KFIjlMMLjpn4UFM0turr4BtYJAueHgdMygygIn1j9Cc\nE/U3ExWahqjJ058hmyo5GZd4/aZ++1CJ1IawxRJyee3c/GGuzEqgS5wZjGAEJh78\npDFinbYMo48kuuuNl34bT/queZfvo7Z35H0mg28CgYEAii8/dylUdU+j4uz3YqyY\nRni1tQb8kb1MXyv11NJ4YjDXqy3064DFCEpODKONQ4YkKRUj4QbqAHZKWjBvfSBg\nCyeENWz5mbqLjn/+3GbBESe1PUNTp82iCE/XRnRKlVZ7gZ7M6u83/I7ViQ4egwnC\nu2d8h743r2sGirRs91s2s9w=\n-----END PRIVATE KEY-----\n",
+  "client_email": "synthesis1@synthesisproject.iam.gserviceaccount.com",
+  "client_id": "115756931549330243678",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/synthesis1%40synthesisproject.iam.gserviceaccount.com"
+}
